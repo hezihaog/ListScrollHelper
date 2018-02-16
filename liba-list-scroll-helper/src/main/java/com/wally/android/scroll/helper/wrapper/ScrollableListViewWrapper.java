@@ -18,7 +18,7 @@ import com.wally.android.scroll.helper.base.AbsScrollableViewWrapper;
 public class ScrollableListViewWrapper extends AbsScrollableViewWrapper<ScrollableListView> {
     private int oldVisibleItem = 0;
     //第一次进入界面时也会回调滚动，所以当手动滚动再监听
-    private boolean isFirst = true;
+    private boolean isNotFirst = false;
 
     public ScrollableListViewWrapper(ScrollableListView scrollingView) {
         super(scrollingView);
@@ -29,7 +29,7 @@ public class ScrollableListViewWrapper extends AbsScrollableViewWrapper<Scrollab
         scrollableView.addOnListViewScrollListener(new ScrollableListView.OnListViewScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView listView, int scrollState) {
-                isFirst = true;
+                isNotFirst = true;
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     if (delegate != null) {
                         if (listView.getLastVisiblePosition() + 1 == listView.getCount()) {
@@ -44,11 +44,11 @@ public class ScrollableListViewWrapper extends AbsScrollableViewWrapper<Scrollab
             @Override
             public void onScroll(AbsListView listView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 if (delegate != null) {
-                    if (firstVisibleItem > oldVisibleItem && isFirst) {
+                    if (firstVisibleItem > oldVisibleItem && isNotFirst) {
                         //上滑
                         delegate.onScrolledToUp();
                     }
-                    if (oldVisibleItem > firstVisibleItem && isFirst) {
+                    if (oldVisibleItem > firstVisibleItem && isNotFirst) {
                         //下滑
                         delegate.onScrolledToDown();
                     }

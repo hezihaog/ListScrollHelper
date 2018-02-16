@@ -30,10 +30,10 @@ public class ScrollableScrollViewWrapper extends AbsScrollableViewWrapper<Scroll
             public void onScrollChanged(int l, int t, int oldl, int oldt) {
                 if (delegate != null) {
                     if (oldt > t && oldt - t > SCROLL_LIMIT) {
-                        //向下
+                        //下滑
                         delegate.onScrolledToDown();
                     } else if (oldt < t && t - oldt > SCROLL_LIMIT) {
-                        //向上
+                        //上滑动
                         delegate.onScrolledToUp();
                     }
                 }

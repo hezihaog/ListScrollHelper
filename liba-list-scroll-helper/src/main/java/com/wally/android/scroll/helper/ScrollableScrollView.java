@@ -89,10 +89,17 @@ public abstract class ScrollableScrollView extends ScrollView implements IScroll
         }
     }
 
+    /**
+     * 当前是否滚动到了顶部
+     */
     public boolean isScrolledToTop() {
         return isScrolledToTop;
     }
 
+    /**
+     * 当时是否滚动到了底部
+     * @return
+     */
     public boolean isScrolledToBottom() {
         return isScrolledToBottom;
     }
@@ -101,10 +108,19 @@ public abstract class ScrollableScrollView extends ScrollView implements IScroll
      * 定义监听接口
      */
     public interface OnScrollChangedListener {
+        /**
+         * 滚动改变时回调
+         */
         void onScrollChanged(int l, int t, int oldl, int oldt);
 
+        /**
+         * 滚动到顶部了
+         */
         void onScrolledToTop();
 
+        /**
+         * 滚动到底部了
+         */
         void onScrolledToBottom();
     }
 

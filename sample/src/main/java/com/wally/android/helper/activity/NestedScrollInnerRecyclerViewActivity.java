@@ -24,6 +24,11 @@ public class NestedScrollInnerRecyclerViewActivity extends BaseSampleActivity {
     private ArrayList<String> mDataList;
 
     @Override
+    protected String onGetToolBarTitle() {
+        return "NestedScroll嵌套RecyclerViewSample";
+    }
+
+    @Override
     protected int onLayoutId() {
         return R.layout.activity_nested_scroll_inner_recycler_view;
     }

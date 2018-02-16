@@ -33,6 +33,11 @@ public class ListViewSampleActivity extends BaseSampleActivity {
     }
 
     @Override
+    protected String onGetToolBarTitle() {
+        return "ListViewSample";
+    }
+
+    @Override
     protected int onLayoutId() {
         return R.layout.activity_list_view_sample;
     }

@@ -12,6 +12,11 @@ public class ScrollViewSampleActivity extends BaseSampleActivity {
     private ScrollView mScrollView;
 
     @Override
+    protected String onGetToolBarTitle() {
+        return "ScrollViewSample";
+    }
+
+    @Override
     protected int onLayoutId() {
         return R.layout.activity_scroll_view_sample;
     }

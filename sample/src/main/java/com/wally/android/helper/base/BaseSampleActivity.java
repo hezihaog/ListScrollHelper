@@ -62,7 +62,12 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
 
     private void setupToolBar() {
         mToolbar = findViewById(R.id.toolBar);
-        mToolbar.setTitle(R.string.app_name);
+        String title = onGetToolBarTitle();
+        if (null == title) {
+            mToolbar.setTitle(R.string.app_name);
+        } else {
+            mToolbar.setTitle(title);
+        }
         mToolbar.setTitleTextColor(getActivity().getResources().getColor(R.color.white));
     }
 
@@ -95,6 +100,10 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
                 outInfoHelper.printInfo("onScrollBottom --> 到底啦");
             }
         });
+    }
+
+    protected String onGetToolBarTitle() {
+        return null;
     }
 
     public ViewGroup getRootLayout() {

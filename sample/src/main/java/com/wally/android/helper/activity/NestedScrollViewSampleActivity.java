@@ -12,6 +12,11 @@ public class NestedScrollViewSampleActivity extends BaseSampleActivity {
     private NestedScrollView mNestedScrollView;
 
     @Override
+    protected String onGetToolBarTitle() {
+        return "NestedScrollViewSample";
+    }
+
+    @Override
     protected void onFindView() {
         mNestedScrollView = findViewById(R.id.nestedScrollView);
     }

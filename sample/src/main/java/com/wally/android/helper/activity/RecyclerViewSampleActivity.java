@@ -21,6 +21,11 @@ public class RecyclerViewSampleActivity extends BaseSampleActivity {
     private ArrayList<String> mDataList;
 
     @Override
+    protected String onGetToolBarTitle() {
+        return "RecyclerViewSample";
+    }
+
+    @Override
     protected int onLayoutId() {
         return R.layout.activity_recycler_view_sample;
     }

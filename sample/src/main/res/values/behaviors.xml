@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scale_down_show_behavior">com.wally.android.helper.widget.ScaleDownShowBehavior</string>
+</resources>

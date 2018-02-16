@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Light">
 
-            <include layout="@layout/layout_tool_bar"/>
+            <include layout="@layout/layout_tool_bar" />
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="20dp"
-            app:layout_behavior="com.wally.android.helper.ScaleDownShowBehavior" />
+            app:layout_behavior="@string/scale_down_show_behavior" />
     </android.support.design.widget.CoordinatorLayout>
 
     <include layout="@layout/layout_list_scroll_out_info" />

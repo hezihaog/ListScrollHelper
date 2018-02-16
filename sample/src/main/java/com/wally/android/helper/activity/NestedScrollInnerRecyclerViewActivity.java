@@ -40,6 +40,8 @@ public class NestedScrollInnerRecyclerViewActivity extends BaseSampleActivity {
         mDataList = DataSourseHelper.loadData(15);
         mRecyclerView.setAdapter(new NestedScrollInnerRecyclerViewActivity.Adapter());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //设置放弃自身滚动，将滚动交给NestedScrollView，解决滑动粘滞
+        mRecyclerView.setNestedScrollingEnabled(false);
     }
 
     @Override

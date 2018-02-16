@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/printInfoScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#000000"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/outInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:text="暂无信息，请滚动查看"
+        android:textColor="#00FF00"
+        android:textSize="14sp" />
+</ScrollView>

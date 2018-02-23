@@ -16,9 +16,24 @@ ListScrollHelper，一个通吃ListView、GridView、ScrollView、RecyclerView�
 
 ### 这里暂时先不讲解代码，后续再补上。
 
+### 使用你的rv版本
+
+- 注：MultiType 内部引用了 com.android.support:recyclerview-v7:26.1.0，如果你不想使用这个版本，可以使用 exclude 将它排除掉，再自行引入你选择的版本。示例如下：
+
+```java
+dependencies {
+    compile('com.hzh:liba-list-scroll-helper:1.0.0', {
+       exclude group: 'com.android.support'
+    })
+    compile 'com.android.support:recyclerview-v7:你选择的版本'
+}
+```
+
 ### 使用
 
 - 第一步：导入库
+
+- compile 'com.hzh:liba-list-scroll-helper:1.0.0'
 
 - 第二步：继承或者"偷梁换柱"
 

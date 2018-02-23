@@ -62,6 +62,7 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
 
     private void setupToolBar() {
         mToolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(mToolbar);
         String title = onGetToolBarTitle();
         if (null == title) {
             mToolbar.setTitle(R.string.app_name);

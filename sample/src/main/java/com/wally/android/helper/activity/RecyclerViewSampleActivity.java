@@ -11,7 +11,7 @@ import com.wally.android.helper.R;
 import com.wally.android.helper.base.BaseSampleActivity;
 import com.wally.android.helper.util.DataSourseHelper;
 import com.wally.android.scroll.helper.ListScrollHelper;
-import com.wally.android.scroll.helper.ScrollableRecyclerView;
+import com.wally.android.scroll.helper.widget.ScrollableRecyclerView;
 import com.wally.android.scroll.helper.wrapper.ScrollableRecyclerViewWrapper;
 
 import java.util.ArrayList;

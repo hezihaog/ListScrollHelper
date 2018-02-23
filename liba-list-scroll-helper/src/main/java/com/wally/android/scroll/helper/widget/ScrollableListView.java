@@ -1,39 +1,38 @@
-package com.wally.android.scroll.helper;
+package com.wally.android.scroll.helper.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.AbsListView;
-import android.widget.GridView;
+import android.widget.ListView;
 
 import com.wally.android.scroll.helper.base.IScrollableView;
 
 import java.util.ArrayList;
 
-
 /**
- * Package: oms.mmc.android.fast.framwork.base
- * FileName: ScrollableGridView
- * Date: on 2018/2/11  下午6:11
+ * Package: oms.mmc.android.fast.framwork.widget.view
+ * FileName: ScrollableListView
+ * Date: on 2018/2/11  下午6:10
  * Auther: zihe
  * Descirbe:
  * Email: hezihao@linghit.com
  */
 
-public abstract class ScrollableGridView extends GridView implements IScrollableView {
-    private final ArrayList<OnListViewScrollListener> mListener =
-            new ArrayList<OnListViewScrollListener>();
+public abstract class ScrollableListView extends ListView implements IScrollableView {
+    private final ArrayList<OnListViewScrollListener> mListener
+            = new ArrayList<OnListViewScrollListener>();
 
-    public ScrollableGridView(Context context) {
+    public ScrollableListView(Context context) {
         super(context);
         init();
     }
 
-    public ScrollableGridView(Context context, AttributeSet attrs) {
+    public ScrollableListView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public ScrollableGridView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ScrollableListView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -43,14 +42,14 @@ public abstract class ScrollableGridView extends GridView implements IScrollable
         setOnScrollListener(new OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                for (ScrollableGridView.OnListViewScrollListener listener : mListener) {
+                for (OnListViewScrollListener listener : mListener) {
                     listener.onScrollStateChanged(view, scrollState);
                 }
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                for (ScrollableGridView.OnListViewScrollListener listener : mListener) {
+                for (OnListViewScrollListener listener : mListener) {
                     listener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
                 }
             }
@@ -63,11 +62,11 @@ public abstract class ScrollableGridView extends GridView implements IScrollable
         void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount);
     }
 
-    public void addOnListViewScrollListener(ScrollableGridView.OnListViewScrollListener listener) {
+    public void addOnListViewScrollListener(OnListViewScrollListener listener) {
         mListener.add(listener);
     }
 
-    public void removeOnListViewScrollListener(ScrollableGridView.OnListViewScrollListener listener) {
+    public void removeOnListViewScrollListener(OnListViewScrollListener listener) {
         mListener.remove(listener);
     }
 

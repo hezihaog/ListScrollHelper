@@ -5,7 +5,7 @@ import android.widget.ScrollView;
 import com.wally.android.helper.R;
 import com.wally.android.helper.base.BaseSampleActivity;
 import com.wally.android.scroll.helper.ListScrollHelper;
-import com.wally.android.scroll.helper.ScrollableScrollView;
+import com.wally.android.scroll.helper.widget.ScrollableScrollView;
 import com.wally.android.scroll.helper.wrapper.ScrollableScrollViewWrapper;
 
 public class ScrollViewSampleActivity extends BaseSampleActivity {

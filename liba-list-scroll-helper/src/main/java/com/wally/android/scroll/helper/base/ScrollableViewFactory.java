@@ -8,11 +8,11 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.wally.android.scroll.helper.ScrollableGridView;
-import com.wally.android.scroll.helper.ScrollableListView;
-import com.wally.android.scroll.helper.ScrollableNestedScrollView;
-import com.wally.android.scroll.helper.ScrollableRecyclerView;
-import com.wally.android.scroll.helper.ScrollableScrollView;
+import com.wally.android.scroll.helper.widget.ScrollableGridView;
+import com.wally.android.scroll.helper.widget.ScrollableListView;
+import com.wally.android.scroll.helper.widget.ScrollableNestedScrollView;
+import com.wally.android.scroll.helper.widget.ScrollableRecyclerView;
+import com.wally.android.scroll.helper.widget.ScrollableScrollView;
 
 
 /**

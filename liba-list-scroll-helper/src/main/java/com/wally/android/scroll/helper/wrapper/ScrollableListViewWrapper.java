@@ -2,7 +2,7 @@ package com.wally.android.scroll.helper.wrapper;
 
 import android.widget.AbsListView;
 
-import com.wally.android.scroll.helper.ScrollableListView;
+import com.wally.android.scroll.helper.widget.ScrollableListView;
 import com.wally.android.scroll.helper.base.AbsScrollableViewWrapper;
 
 

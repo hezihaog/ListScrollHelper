@@ -2,7 +2,7 @@ package com.wally.android.scroll.helper.wrapper;
 
 import android.support.v4.widget.NestedScrollView;
 
-import com.wally.android.scroll.helper.ScrollableNestedScrollView;
+import com.wally.android.scroll.helper.widget.ScrollableNestedScrollView;
 import com.wally.android.scroll.helper.base.AbsScrollableViewWrapper;
 
 

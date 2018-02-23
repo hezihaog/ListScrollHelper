@@ -2,7 +2,7 @@ package com.wally.android.scroll.helper.wrapper;
 
 import android.support.v7.widget.RecyclerView;
 
-import com.wally.android.scroll.helper.ScrollableRecyclerView;
+import com.wally.android.scroll.helper.widget.ScrollableRecyclerView;
 import com.wally.android.scroll.helper.base.AbsScrollableViewWrapper;
 
 

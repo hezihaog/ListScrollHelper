@@ -1,4 +1,4 @@
-package com.wally.android.scroll.helper;
+package com.wally.android.scroll.helper.widget;
 
 import android.content.Context;
 import android.support.v4.widget.NestedScrollView;

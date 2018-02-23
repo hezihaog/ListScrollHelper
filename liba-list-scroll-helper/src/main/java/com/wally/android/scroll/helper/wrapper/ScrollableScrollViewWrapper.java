@@ -1,7 +1,7 @@
 package com.wally.android.scroll.helper.wrapper;
 
 
-import com.wally.android.scroll.helper.ScrollableScrollView;
+import com.wally.android.scroll.helper.widget.ScrollableScrollView;
 import com.wally.android.scroll.helper.base.AbsScrollableViewWrapper;
 
 /**
